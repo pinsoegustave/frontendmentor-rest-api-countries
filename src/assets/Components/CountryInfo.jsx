@@ -40,18 +40,18 @@ const CountryInfo = () => {
         records.map((item, index) => (
         <div key={index} className="p-4 mt-8 px-4 md:px-20 dark:text-white">
         <div className="block md:flex">
-          <div className="p-4 px-4 h-2/5">
+          <div className="px-2 h-2/5 object-fill sm:size-1">
             <img src={item.flags.svg} alt="canada" />
           </div>
           <div className="p-4">
             <h2 className="font-bold text-2xl">{item.name.common}</h2>
             <div className="mt-4">
               <ul className="">
-                <li><b>Native name:</b> { item.official }</li>
+                {/* <li><b>Native name:</b> { item.official }</li> */}
+                <li><b>Capital: </b> {item.capital}</li>
                 <li><b>Population:</b> {item.population.toLocaleString()}</li>
                 <li><b>Region:</b> {item.region}</li>
                 <li><b>Sub Region:</b> {item.subregion}</li>
-                <li><b>Capital: </b> {item.capital}</li>
               </ul>
               <ul className="">
                 <li><b>Top Level Domain:</b> {item.tld}</li>
